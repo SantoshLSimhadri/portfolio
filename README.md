@@ -36,7 +36,7 @@ My approach involved not only predictive analytics but also strategic insights i
 
 ### Project: Customer Insight Analytics for Restaurant Business (May 2024 - Jun 2024)
 
-For the DineInsight project, I embarked on a mission to revolutionize the marketing strategy of a local restaurant by harnessing the power of customer insights. The project involved conducting a comprehensive segmentation analysis, where I categorized customers based on demographic data, dining preferences, and behavioral patterns. This segmentation was critical in designing personalized marketing campaigns that resonated with specific customer groups.
+For the this project, I embarked on a mission to revolutionize the marketing strategy of a local restaurant by harnessing the power of customer insights. The project involved conducting a comprehensive segmentation analysis, where I categorized customers based on demographic data, dining preferences, and behavioral patterns. This segmentation was critical in designing personalized marketing campaigns that resonated with specific customer groups.
 
 A significant part of the project involved analyzing survey data to uncover deep-seated customer preferences, which directly informed our marketing strategies. By creating detailed and visually appealing dashboards in Tableau, I provided the marketing team with a clear and actionable view of customer behavior trends. The insights generated from this project not only improved targeted marketing effectiveness by 15% but also contributed to a 10% increase in overall customer satisfaction. This project showcased my expertise in transforming customer data into strategic insights and delivering measurable business results through enhanced customer experiences.
 
