@@ -1,9 +1,3 @@
-# Marketing Analyst
-
-### Education
-Masters in Business Analytics
-Wright State University • Dayton, OH • Aug 2023 • 4.0 GPA
-
 # Portfolio & Resume
 
 Welcome to my portfolio website repository! I'm **Leela Santosh Chowdary Simhadri**, a dedicated **Marketing Analyst** with a strong focus on leveraging data-driven insights to optimize marketing strategies and enhance business outcomes. With a robust foundation in business analytics and practical experience in real-world projects, I bring a blend of analytical acumen and strategic thinking to every initiative I undertake.
@@ -11,6 +5,14 @@ Welcome to my portfolio website repository! I'm **Leela Santosh Chowdary Simhadr
 ## About Me
 
 I am deeply passionate about transforming raw data into actionable insights that drive effective marketing decisions. My expertise lies in utilizing tools such as **SQL**, **Python**, **R**, and data visualization platforms like **Tableau** and **Power BI**. I enjoy diving deep into datasets, unraveling trends, and crafting strategies that enhance marketing performance and improve return on investment (ROI).
+
+## Techincal Skills 
+
+Python, Tableau, PowerBI, R, SPSS, SQL, Google Analytics, SAS
+
+### Education
+Masters in Business Analytics
+Wright State University • Dayton, OH • Aug 2023 • 4.0 GPA
 
 ## My Work experience
 
@@ -20,14 +22,23 @@ During my tenure as a **Data Science Trainee** at MedTourEasy Medical, I spearhe
 
 ## My Projects
 
-### **2. Campaign Performance Analysis & Optimization**
+### Project: Customer-Centric Sales Optimization and Marketing Strategies for Athletic Retail (Oct 2024 - Dec 2024)
 
-In early 2024, I led a comprehensive campaign performance analysis to boost the efficiency of digital and email marketing strategies. By evaluating key performance metrics, I identified trends that directly contributed to a 20% improvement in conversion rates. My role involved developing automated **SQL** queries to analyze customer acquisition costs (CAC) and ROI, which significantly reduced reporting time by 40%. Through my data-driven approach, I provided actionable insights that optimized marketing spending, leading to a 15% enhancement in overall ROI. This project highlighted my ability to blend analytical rigor with strategic marketing insights, delivering tangible results for business growth.
+This is my Capstone Project, I led a strategic initiative to enhance sales and marketing performance within the athletic retail sector. The core objective was to transform raw customer data into actionable insights that could drive targeted marketing strategies and boost sales revenue. Leveraging Python, I employed advanced clustering techniques to segment customers into six distinct groups based on their income, education level, and purchasing behavior. This segmentation allowed us to tailor our marketing strategies effectively, addressing the unique needs of each customer cohort.
 
-### **3. Customer Segmentation & Predictive Modeling**
+To further optimize retention strategies, I implemented a comprehensive RFM (Recency, Frequency, Monetary) analysis, which proved instrumental in identifying and nurturing loyal customers. This strategic move resulted in a remarkable 50% increase in revenue contribution from our most loyal customer base. Additionally, I developed dynamic and interactive dashboards using Power BI, providing the sales and marketing teams with real-time insights into customer trends. The visualization tools not only improved decision-making but also empowered teams to launch highly effective targeted campaigns, leading to a 25% boost in customer engagement. The project underscored my ability to blend analytical expertise with business acumen, driving tangible business outcomes through data-driven strategies.
 
-One of my most impactful projects involved building customer segmentation and predictive modeling solutions using **Python** and **R**. By employing advanced analytics techniques, I identified high-value customer groups, increasing the efficiency of targeted marketing by 25%. Additionally, I applied predictive analytics to forecast customer behavior, leading to an 18% improvement in lead conversion rates. My work extended to designing data-driven targeting strategies that enhanced engagement across multiple marketing channels. This project underscored my capability to merge technical expertise with marketing strategy, ensuring that analytics-driven decisions translated into measurable outcomes.
+### Project: Predictive Revenue Modeling for University Football Team (Feb 2024 - Apr 2024)
 
+This was a forward-thinking project where I developed a predictive revenue model for a university football team, aiming to provide an accurate financial forecast and identify growth opportunities. Utilizing historical performance and financial data, I constructed a predictive model with a 95% confidence interval, offering stakeholders a clear vision of expected revenues for the upcoming season.
+
+My approach involved not only predictive analytics but also strategic insights into revenue streams. I proposed actionable strategies that were projected to increase sponsorship revenue by 20% and boost ticket sales by 15%. The culmination of this project was a detailed presentation to university stakeholders, where I demonstrated the potential for generating an additional $500,000 in revenue through targeted sponsorship deals and optimized ticket pricing strategies. This project highlighted my proficiency in blending statistical modeling with strategic business insights, delivering both predictive accuracy and tangible financial impact.
+
+### Project: Customer Insight Analytics for Restaurant Business (May 2024 - Jun 2024)
+
+For the DineInsight project, I embarked on a mission to revolutionize the marketing strategy of a local restaurant by harnessing the power of customer insights. The project involved conducting a comprehensive segmentation analysis, where I categorized customers based on demographic data, dining preferences, and behavioral patterns. This segmentation was critical in designing personalized marketing campaigns that resonated with specific customer groups.
+
+A significant part of the project involved analyzing survey data to uncover deep-seated customer preferences, which directly informed our marketing strategies. By creating detailed and visually appealing dashboards in Tableau, I provided the marketing team with a clear and actionable view of customer behavior trends. The insights generated from this project not only improved targeted marketing effectiveness by 15% but also contributed to a 10% increase in overall customer satisfaction. This project showcased my expertise in transforming customer data into strategic insights and delivering measurable business results through enhanced customer experiences.
 
 ## Certifications
 
@@ -36,8 +47,6 @@ One of my most impactful projects involved building customer segmentation and pr
 - Google Adwords (Google, 2023)
 
 ## Contact
-
-I'm always open to exploring new opportunities and collaborating on challenging projects. You can reach me at:
 
 - Email: santoshchowdarysimhadri.23f@gmail.com
 - LinkedIn: [Santosh Simhadri](http://www.linkedin.com/in/santoshsimhadri)
