@@ -11,8 +11,8 @@ I am deeply passionate about transforming raw data into actionable insights that
 Python, Tableau, PowerBI, R, SPSS, SQL, Google Analytics, SAS
 
 ### Education
-Masters in Business Analytics
-Wright State University • Dayton, OH • Aug 2023 • 4.0 GPA
+  Masters in Business Analytics
+  Wright State University • Dayton, OH • Aug 2023 • 4.0 GPA
 
 ## My Work experience
 
