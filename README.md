@@ -1,8 +1,8 @@
-# Data analyst
+# Marketing Analyst
 
 ### Education
 Masters in Business Analytics
-Bachelors in Mechanical Engineering
+Wright State University • Dayton, OH • Aug 2023 • 4.0 GPA
 
 # Portfolio & Resume
 
