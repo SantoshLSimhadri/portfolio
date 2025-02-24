@@ -1,4 +1,4 @@
-# Portfolio & Resume
+# Portfolio
 
 Welcome to my portfolio website repository! I'm **Leela Santosh Chowdary Simhadri**, a dedicated **Marketing Analyst** with a strong focus on leveraging data-driven insights to optimize marketing strategies and enhance business outcomes. With a robust foundation in business analytics and practical experience in real-world projects, I bring a blend of analytical acumen and strategic thinking to every initiative I undertake.
 
