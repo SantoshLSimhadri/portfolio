@@ -1,19 +1,20 @@
 # Portfolio
 
-Welcome to my portfolio website repository! I'm **Leela Santosh Chowdary Simhadri**, a dedicated **Marketing Analyst** with a strong focus on leveraging data-driven insights to optimize marketing strategies and enhance business outcomes. With a robust foundation in business analytics and practical experience in real-world projects, I bring a blend of analytical acumen and strategic thinking to every initiative I undertake.
+Welcome to my portfolio website repository! I'm **Leela Santosh Chowdary Simhadri**, As a **data and marketing analyst** with a passion for transforming raw data into actionable media strategies. With hands-on experience in forecasting, programmatic insights, and KPI-driven storytelling, I specialize in performance media analytics using Python, SQL, and BI tools. This portfolio showcases my work across customer segmentation, digital campaign optimization, and test-and-learn experimentation.
 
 ## About Me
 
 I am deeply passionate about transforming raw data into actionable insights that drive effective marketing decisions. My expertise lies in utilizing tools such as **SQL**, **Python**, **R**, and data visualization platforms like **Tableau** and **Power BI**. I enjoy diving deep into datasets, unraveling trends, and crafting strategies that enhance marketing performance and improve return on investment (ROI).
 
 ## Techincal Skills 
-
-Python, Tableau, PowerBI, R, SPSS, SQL, Google Analytics, SAS
+•	Programming & Tools: Python, SQL, R, Excel, SPSS, SAS, Alteryx
+•	Data Visualization: Tableau, Power BI, Google Analytics
+•	Analytics Techniques: Predictive Modelling, Statistical Analysis, Forecasting (ARIMA, VAR, A/B, Testing Data Wrangling, KPI Reporting, Trend Analysis
 
 ### Education
-- Masters in Marketing Analytics & Insights
+• Masters in Marketing Analytics & Insights
   
-- Wright State University • Dayton, OH • Aug 2023 • 3.9 GPA
+• Wright State University • Dayton, OH • Aug 2023 • 3.9 GPA
 
 ## My Work experience
 
@@ -35,17 +36,23 @@ To further optimize retention strategies, I implemented a comprehensive RFM (Rec
 [Pie chart Customer Segmentation][assets/Project Picture.png]
 
 
-### Project: Predictive Revenue Modeling for University Football Team (Feb 2024 - Apr 2024)
+### Project: Predictive Revenue Modeling for University Football Team (May 2024 - Jun 2024)
 
-This was a forward-thinking project where I developed a predictive revenue model for a university football team, aiming to provide an accurate financial forecast and identify growth opportunities. Utilizing historical performance and financial data, I constructed a predictive model with a 95% confidence interval, offering stakeholders a clear vision of expected revenues for the upcoming season.
+As a forecasting analyst, I designed a predictive model to estimate seasonal revenue generated from a university football team’s media campaigns and sponsorship efforts. Leveraging Python’s forecasting libraries and integrating SQL pipelines, I built a model that provided a 95% confidence interval on annual revenue projections. These forecasts played a pivotal role in guiding strategic sponsorship decisions and budget allocations.
 
-My approach involved not only predictive analytics but also strategic insights into revenue streams. I proposed actionable strategies that were projected to increase sponsorship revenue by 20% and boost ticket sales by 15%. The culmination of this project was a detailed presentation to university stakeholders, where I demonstrated the potential for generating an additional $500,000 in revenue through targeted sponsorship deals and optimized ticket pricing strategies. This project highlighted my proficiency in blending statistical modeling with strategic business insights, delivering both predictive accuracy and tangible financial impact.
+The project culminated in a cross-functional presentation supported by dynamic Tableau dashboards that visualized weekly revenue trends and ROI projections. Insights from the model helped optimize campaign pacing, media placement timing, and stakeholder alignment — resulting in a 20% increase in sponsorship acquisitions and a 15% rise in ticket sales. This project demonstrated my ability to translate forecasting insights into measurable business outcomes within a performance media context.
 
-### Project: Customer Insight Analytics for Restaurant Business (May 2024 - Jun 2024)
+### Project: Audience Behavior and KPI Analysis for Digital Display & Paid Campaigns  (Jan 2024 - April 2024)
 
-For this project, I embarked on a mission to revolutionize the marketing strategy of a local restaurant by harnessing the power of customer insights. The project involved conducting a comprehensive segmentation analysis, where I categorized customers based on demographic data, dining preferences, and behavioral patterns. This segmentation was critical in designing personalized marketing campaigns that resonated with specific customer groups.
+In this project, I analyzed customer data for a mid-sized restaurant brand to identify behavioral and demographic segments that could be targeted more effectively via programmatic campaigns. Using Tableau and Excel, I built visualizations that broke down satisfaction trends, engagement metrics, and repeat visit behavior by segment. These insights helped create tailored content and media strategies that increased campaign resonance across platforms.
 
-A significant part of the project involved analyzing survey data to uncover deep-seated customer preferences, which directly informed our marketing strategies. By creating detailed and visually appealing dashboards in Tableau, I provided the marketing team with a clear and actionable view of customer behavior trends. The insights generated from this project not only improved targeted marketing effectiveness by 15% but also contributed to a 10% increase in overall customer satisfaction. This project showcased my expertise in transforming customer data into strategic insights and delivering measurable business results through enhanced customer experiences.
+I also evaluated survey-based feedback to validate targeting assumptions and adjust messaging strategies. The result was a 15% increase in campaign targeting effectiveness and a 10% boost in overall customer satisfaction. Through structured KPI development and behavioral data analysis, I was able to enhance digital media decision-making and optimize the impact of performance marketing tactics.
+
+### Project: Test-and-Learn Strategy for Local Business Promotions  (Oct 2023 - Dec 2023)
+
+For this project, I collaborated with a local business to design a performance-focused marketing and growth strategy that incorporated digital promotion channels, influencer marketing, and RTB-based experimentation. I performed SWOT and competitive analysis to identify market positioning gaps and used a test-and-learn model to measure the effectiveness of various campaign formats — including time-based discounts, walk-in promotions, and social engagement initiatives.
+
+I developed a KPI framework that monitored average customer spend, repeat visits, and conversion rate by channel. Dashboards and insights guided iterative campaign changes, resulting in increased foot traffic and improved ROI per campaign. This hands-on experience with real-time campaign optimization showcased my ability to support media planning, data-driven storytelling, and client-side execution — all essential for success in Horizon Media’s Performance Media group.
 
 ## Certifications
 
