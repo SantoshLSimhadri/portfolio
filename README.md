@@ -11,7 +11,8 @@ I am deeply passionate about transforming raw data into actionable insights that
 
 •	Data Visualization: Tableau, Power BI, Google Analytics
 
-•	Analytics Techniques: Predictive Modelling, Statistical Analysis, Forecasting (ARIMA, VAR, A/B, Testing Data Wrangling, KPI Reporting, Trend Analysis
+•	Analytics Techniques: Predictive Modelling, Statistical Analysis, Forecasting (ARIMA, VAR, A/B, Testing Data Wrangling, KPI Reporting, Trend 
+                        Analysis
 
 ### Education
 • Masters in Marketing Analytics & Insights
