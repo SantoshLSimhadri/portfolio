@@ -45,7 +45,7 @@ To further optimize retention strategies, I implemented a comprehensive RFM (Rec
 <img src="/assets/project-picture-3.png" alt="KPI Dashboard" width="600">
 <img src="/assets/project-picture-4.png" alt="Top Customers Analysis" width="600">
 <img src="/assets/project-picture-2.png" alt="RFM Score Distribution" width="600">
-<img src="/assets/project-picture-1.png" alt="Customer Segmentation Pie Chart" width="600">
+<img src="/assets/project-picture.png" alt="Customer Segmentation Pie Chart" width="600">
 
 
 ### Project: Predictive Revenue Modeling for University Football Team (May 2024 - Jun 2024)
