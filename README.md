@@ -8,7 +8,9 @@ I am deeply passionate about transforming raw data into actionable insights that
 
 ## Techincal Skills 
 •	Programming & Tools: Python, SQL, R, Excel, SPSS, SAS, Alteryx
+
 •	Data Visualization: Tableau, Power BI, Google Analytics
+
 •	Analytics Techniques: Predictive Modelling, Statistical Analysis, Forecasting (ARIMA, VAR, A/B, Testing Data Wrangling, KPI Reporting, Trend Analysis
 
 ### Education
