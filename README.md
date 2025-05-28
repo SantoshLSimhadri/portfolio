@@ -7,12 +7,12 @@ Welcome to my portfolio website repository! I'm **Leela Santosh Chowdary Simhadr
 I am deeply passionate about transforming raw data into actionable insights that drive effective marketing decisions. My expertise lies in utilizing tools such as **SQL**, **Python**, **R**, and data visualization platforms like **Tableau** and **Power BI**. I enjoy diving deep into datasets, unraveling trends, and crafting strategies that enhance marketing performance and improve return on investment (ROI).
 
 ## Techincal Skills 
-•	Programming & Tools: Python, SQL, R, Excel, SPSS, SAS, Alteryx
+**•	Programming & Tools: Python, SQL, R, Excel, SPSS, SAS, Alteryx**
 
-•	Data Visualization: Tableau, Power BI, Google Analytics
+**•	Data Visualization: Tableau, Power BI, Google Analytics**
 
-•	Analytics Techniques: Predictive Modelling, Statistical Analysis, Forecasting (ARIMA, VAR, A/B, Testing Data Wrangling, KPI Reporting, Trend 
-                        Analysis
+**•	Analytics Techniques: Predictive Modelling, Statistical Analysis, Forecasting (ARIMA, VAR, A/B, Testing Data Wrangling, KPI Reporting, Trend 
+                        Analysis**
 
 ### Education
 • Masters in Marketing Analytics & Insights
