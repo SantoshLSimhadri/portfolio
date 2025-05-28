@@ -33,11 +33,6 @@ This is my Capstone Project, I led a strategic initiative to enhance sales and m
 
 To further optimize retention strategies, I implemented a comprehensive RFM (Recency, Frequency, Monetary) analysis, which proved instrumental in identifying and nurturing loyal customers. This strategic move resulted in a remarkable 50% increase in revenue contribution from our most loyal customer base. Additionally, I developed dynamic and interactive dashboards using Power BI, providing the sales and marketing teams with real-time insights into customer trends. The visualization tools not only improved decision-making but also empowered teams to launch highly effective targeted campaigns, leading to a 25% boost in customer engagement. The project underscored my ability to blend analytical expertise with business acumen, driving tangible business outcomes through data-driven strategies. Below are the visualizations of Sales in Dashboard and RFM Analysis.
 
-![kpi Dashbaord for Sales performance & Campaign Analysis](assets/project-picture-3.png)
-![Customer Segmentation and Top Customer Analysis](assets/project-picture-4.png)
-![RFM Score Distribution Analysis](assets/project-picture-2.png)
-![Pie chart Customer Segmentation](assets/project-picture.png)
-
 <h3>Visualizations from RFM and Sales Dashboard</h3>
 
 <p>Below are key visuals supporting my RFM-based customer segmentation and sales performance dashboard analysis.</p>
