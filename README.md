@@ -11,9 +11,9 @@ I am deeply passionate about transforming raw data into actionable insights that
 Python, Tableau, PowerBI, R, SPSS, SQL, Google Analytics, SAS
 
 ### Education
-- Masters in Business Analytics
+- Masters in Marketing Analytics & Insights
   
-- Wright State University • Dayton, OH • Aug 2023 • 4.0 GPA
+- Wright State University • Dayton, OH • Aug 2023 • 3.9 GPA
 
 ## My Work experience
 
@@ -27,7 +27,13 @@ During my tenure as a **Data Science Trainee** at MedTourEasy Medical, I spearhe
 
 This is my Capstone Project, I led a strategic initiative to enhance sales and marketing performance within the athletic retail sector. The core objective was to transform raw customer data into actionable insights that could drive targeted marketing strategies and boost sales revenue. Leveraging Python, I employed advanced clustering techniques to segment customers into six distinct groups based on their income, education level, and purchasing behavior. This segmentation allowed us to tailor our marketing strategies effectively, addressing the unique needs of each customer cohort.
 
-To further optimize retention strategies, I implemented a comprehensive RFM (Recency, Frequency, Monetary) analysis, which proved instrumental in identifying and nurturing loyal customers. This strategic move resulted in a remarkable 50% increase in revenue contribution from our most loyal customer base. Additionally, I developed dynamic and interactive dashboards using Power BI, providing the sales and marketing teams with real-time insights into customer trends. The visualization tools not only improved decision-making but also empowered teams to launch highly effective targeted campaigns, leading to a 25% boost in customer engagement. The project underscored my ability to blend analytical expertise with business acumen, driving tangible business outcomes through data-driven strategies.
+To further optimize retention strategies, I implemented a comprehensive RFM (Recency, Frequency, Monetary) analysis, which proved instrumental in identifying and nurturing loyal customers. This strategic move resulted in a remarkable 50% increase in revenue contribution from our most loyal customer base. Additionally, I developed dynamic and interactive dashboards using Power BI, providing the sales and marketing teams with real-time insights into customer trends. The visualization tools not only improved decision-making but also empowered teams to launch highly effective targeted campaigns, leading to a 25% boost in customer engagement. The project underscored my ability to blend analytical expertise with business acumen, driving tangible business outcomes through data-driven strategies. Below are the visualizations of Sales in Dashboard and RFM Analysis.
+
+[kpi Dashbaord for Sales performance & Campaign Analysis][assets/Project Picture 3.png]
+[Customer Segmentation and Top Customer Analysis][assets/Project Picture 4.png]
+[RFM Score Distribution Analysis][assets/project picture 2.png]
+[Pie chart Customer Segmentation][assets/Project Picture.png]
+
 
 ### Project: Predictive Revenue Modeling for University Football Team (Feb 2024 - Apr 2024)
 
