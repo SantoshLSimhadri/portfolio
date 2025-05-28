@@ -38,6 +38,15 @@ To further optimize retention strategies, I implemented a comprehensive RFM (Rec
 ![RFM Score Distribution Analysis](assets/project-picture-2.png)
 ![Pie chart Customer Segmentation](assets/Project-Picture.png)
 
+<h3>Visualizations from RFM and Sales Dashboard</h3>
+
+<p>Below are key visuals supporting my RFM-based customer segmentation and sales performance dashboard analysis.</p>
+
+<img src="/assets/project-picture-3.png" alt="KPI Dashboard" width="600">
+<img src="/assets/project-picture-4.png" alt="Top Customers Analysis" width="600">
+<img src="/assets/project-picture-2.png" alt="RFM Score Distribution" width="600">
+<img src="/assets/project-picture-1.png" alt="Customer Segmentation Pie Chart" width="600">
+
 
 ### Project: Predictive Revenue Modeling for University Football Team (May 2024 - Jun 2024)
 
