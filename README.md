@@ -11,18 +11,23 @@ Throughout my career, I have successfully contributed to projects resulting in s
 
 ## Techincal Skills 
 
-**• Programming & Tools: SQL, Python, R, VBA, DAX, SAS, SPSS, Stata, Excel (Advanced)**
+• Programming & Tools: SQL, Python, R, VBA, DAX, SAS, SPSS, Stata, Excel (Advanced)
 
-**• Data Visualization: Power BI, Tableau, Looker, Qlik Sense, Google Analytics, Matplotlib, Seaborn**
 
-**• Database & Analytics: Snowflake, BigQuery, Redshift, Teradata, SSAS, Hadoop, Spark**
+• Data Visualization: Power BI, Tableau, Looker, Qlik Sense, Google Analytics, Matplotlib, Seaborn
 
-**• Cloud Platforms: AWS Analytics Suite, Azure, Google Cloud Platform, Salesforce Commerce Cloud**
 
-**• Analytics Techniques: Regression Analysis, Hypothesis Testing, Correlation Analysis, Time Series Analysis, Market Basket Analysis, A/B Testing, Customer  
-    Segmentation, Cohort Analysis, Statistical Process Control**
+• Database & Analytics: Snowflake, BigQuery, Redshift, Teradata, SSAS, Hadoop, Spark
+
+
+• Cloud Platforms: AWS Analytics Suite, Azure, Google Cloud Platform, Salesforce Commerce Cloud
+
+
+• Analytics Techniques: Regression Analysis, Hypothesis Testing, Correlation Analysis, Time Series Analysis, 
+  Market Basket Analysis, A/B Testing, Customer Segmentation, Cohort Analysis, Statistical Process Control
+  
     
-**• Finance & Collaboration Tools: SAP BPC, Hyperion, Anaplan, NetSuite, JIRA, Confluence, Agile/Scrum**
+• Finance & Collaboration Tools: SAP BPC, Hyperion, Anaplan, NetSuite, JIRA, Confluence, Agile/Scrum
 
 ### Education
 • Masters in Business Analytics
