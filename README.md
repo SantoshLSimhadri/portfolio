@@ -73,7 +73,7 @@ I collected competitor intelligence including pricing data, promotional campaign
 ## Contact
 
 - Email: leela.slsc1507@gmail.com
-- LinkedIn: [Santosh Simhadri](www.linkedin.com/in/leelasimhadri)
+- LinkedIn: [Leela Santosh Simhadri](www.linkedin.com/in/leelasimhadri)
 - GitHub: [Your GitHub Profile](your-github-url)
 
 Thank you for taking the time to visit my portfolio. I look forward to connecting with you and discussing how my skills and experiences align with your needs.
