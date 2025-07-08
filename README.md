@@ -1,76 +1,67 @@
 # Portfolio
 
-Welcome to my portfolio website repository! I'm **Leela Santosh Chowdary Simhadri**, As a **data and marketing analyst** with a passion for transforming raw data into actionable media strategies. With hands-on experience in forecasting, programmatic insights, and KPI-driven storytelling, I specialize in performance media analytics using Python, SQL, and BI tools. This portfolio showcases my work across customer segmentation, digital campaign optimization, and test-and-learn experimentation.
+Welcome to my portfolio website repository! I'm Leela Santosh Chowdary Simhadri, an experienced Business Analytics professional with a passion for transforming complex data into actionable business strategies. With hands-on expertise across banking, automotive, and e-commerce industries, I specialize in advanced statistical analysis, fraud detection, and process optimization using Python, SQL, R, and enterprise BI tools. This portfolio showcases my work across fraud detection and risk analytics in banking, warranty optimization and quality analysis in automotive, and customer segmentation and personalization in e-commerce. My projects demonstrate expertise in building predictive models, developing interactive dashboards, implementing statistical process controls, and creating data-driven strategies that transform complex datasets into clear, actionable insights for business stakeholders.
+
 
 ## About Me
 
-I am deeply passionate about transforming raw data into actionable insights that drive effective marketing decisions. My expertise lies in utilizing tools such as **SQL**, **Python**, **R**, and data visualization platforms like **Tableau** and **Power BI**. I enjoy diving deep into datasets, unraveling trends, and crafting strategies that enhance marketing performance and improve return on investment (ROI).
+I am an experienced Business Analytics professional with a proven track record across banking, automotive, and e-commerce industries. My expertise lies in transforming complex data into actionable insights that drive business decisions and optimize performance. With advanced skills in SQL programming, Python (Pandas, NumPy, SciPy), and data visualization tools including Tableau and Power BI, I specialize in creating interactive dashboards and conducting sophisticated statistical analyses.
+Throughout my career, I have successfully contributed to projects resulting in significant cost reductions and revenue increases through data-driven strategies. My passion for analytics extends beyond technical implementation. I excel at translating complex data insights into actionable business recommendations that resonate with stakeholders at all levels. From fraud detection and churn analysis to demand forecasting and price optimization, I bring a comprehensive analytical approach to every challenge.
+
 
 ## Techincal Skills 
-**•	Programming & Tools: Python, SQL, R, Excel, SPSS, SAS, Alteryx**
 
-**•	Data Visualization: Tableau, Power BI, Google Analytics**
-
-**•	Analytics Techniques: Predictive Modelling, Statistical Analysis, Forecasting (ARIMA, VAR, A/B, Testing Data Wrangling, KPI Reporting, Trend 
-                        Analysis**
+**• Programming & Tools: SQL, Python, R, VBA, DAX, SAS, SPSS, Stata, Excel (Advanced)**
+**• Data Visualization: Power BI, Tableau, Looker, Qlik Sense, Google Analytics, Matplotlib, Seaborn**
+**• Database & Analytics: Snowflake, BigQuery, Redshift, Teradata, SSAS, Hadoop, Spark**
+**• Cloud Platforms: AWS Analytics Suite, Azure, Google Cloud Platform, Salesforce Commerce Cloud**
+**• Analytics Techniques: Regression Analysis, Hypothesis Testing, Correlation Analysis, Time Series Analysis, Market Basket Analysis, A/B Testing, Customer Segmentation, Cohort Analysis, Statistical Process Control**
+**• Finance & Collaboration Tools: SAP BPC, Hyperion, Anaplan, NetSuite, JIRA, Confluence, Agile/Scrum**
 
 ### Education
-• Masters in Marketing Analytics & Insights
+• Masters in Business Analytics
   
 • Wright State University • Dayton, OH • Aug 2023 • 3.9 GPA
 
 ## My Work experience
 
-### **1. Data Science Project at MedTourEasy Medical**
+## Business Analyst at First Community Bank, Utah (Oct 2024 - Present)
+In my current role at First Community Bank, I am leading critical analytics initiatives focused on real-time fraud monitoring and credit underwriting improvements. This position has allowed me to directly impact the bank's risk management strategies while working closely with risk, compliance, and data science teams.
+My primary achievement has been utilizing SQL to extract, cleanse, and transform over 25 million transactional records from multiple legacy banking platforms. This massive data processing effort laid the foundation for sophisticated fraud detection models. I led the statistical analysis effort using Python (Pandas, SciPy, NumPy) to implement regression modeling, hypothesis testing, and time series forecasting, successfully identifying behavioral fraud patterns that were previously undetected.
+To ensure insights were accessible to executive stakeholders, I developed and maintained interactive Power BI dashboards that visualize transaction anomalies, fraud heatmaps, and credit score performance trends. These visualizations have become essential tools for daily decision-making across the organization. Additionally, I collaborated with model validation teams using SAS and R to calibrate fraud scoring algorithms, ensuring our outputs aligned with regulatory reporting standards including Basel III and CCAR requirements.
+The impact of this work has been substantial – my recommendations enabled a 22% reduction in fraud losses and streamlined the credit risk assessment cycle by 15%, representing millions in saved revenue and improved operational efficiency.
 
-During my tenure as a **Data Science Trainee** at MedTourEasy Medical, I spearheaded an analytical project that involved processing and analyzing over 500,000 fitness data records. This project aimed to uncover valuable trends in user activity, engagement, and performance metrics. I utilized **Python** and **R** to build machine learning models, achieving an impressive 85% accuracy in predicting user retention. Additionally, I developed personalized workout recommendations, enhancing the user experience. To streamline data reporting and decision-making, I designed interactive **Tableau** dashboards that reduced reporting time by 40% and facilitated quicker insights for stakeholders.
+## Business Analyst at Tenneco (Oct 2023 - Sep 2024)
+During my tenure at Tenneco, I led end-to-end analytics efforts across cross-functional teams including engineering, quality assurance, and dealer operations. The focus was on redefining warranty analytics and improving data accessibility across the organization.
+I wrote advanced SQL queries and utilized Hadoop and Spark to process high-volume claims, parts data, and IoT telemetry from connected vehicles. This big data approach allowed us to handle the massive scale of automotive data while maintaining performance. Using R and SPSS, I conducted regression and correlation analysis that uncovered early-life failures tied to specific environmental conditions and part suppliers – insights that directly influenced manufacturing decisions.
+A key deliverable was designing and publishing interactive Tableau and Power BI dashboards to monitor defect rates, recall coverage, and supplier performance KPIs. These dashboards transformed how the organization tracked quality metrics. I also established a statistical process control (SPC) framework to track manufacturing variation and implement early warning thresholds, preventing quality issues before they reached customers.
+The solution contributed to a 14% annual reduction in warranty payouts and significantly improved recall campaign precision and customer satisfaction scores.
 
-## My Projects
+## Data Analyst at Cognizant (April 2021 - July 2023)
+At Cognizant, I defined and executed a full-scale customer segmentation strategy for a major e-commerce client. Using Python (Pandas, Matplotlib) and SQL, I grouped users based on lifecycle stage, purchase frequency, and product affinities, creating actionable customer profiles that drove personalized marketing strategies.
+I designed and evaluated A/B and multivariate tests on homepage personalization, dynamic pricing, and email campaign timing. Using Stata and Seaborn, I interpreted statistical significance to ensure our recommendations were data-driven and reliable. The integration of purchase, clickstream, and marketing data using Google Cloud Analytics allowed me to optimize queries and pipelines to support real-time recommendation feeds.
+My Tableau dashboards for conversion funnel performance, campaign ROI, churn tracking, and cohort behavior analysis became essential tools for the product and growth teams. By partnering closely with these teams, I helped launch personalization features that drove a 19% increase in revenue per session and improved cart abandonment recovery by 11%. My data-driven recommendations were incorporated into the quarterly product roadmap, demonstrating the strategic value of analytics.
 
-### Project: Customer-Centric Sales Optimization and Marketing Strategies for Athletic Retail (Oct 2024 - Dec 2024)
+## Data Analyst at Noah Technologies (Oct 2019 - March 2021)
+At TCS, I performed root cause analysis on vehicle warranty claims and quality issues using statistical methods and machine learning algorithms. This analytical approach identified manufacturing defects that saved $3M annually in recall costs. I created automated reporting solutions using VBA and Excel macros to track dealer inventory levels, sales velocity, and parts demand forecasting across 500+ dealership locations nationwide.
+Utilizing Teradata and SSAS, I mined customer feedback data from surveys, social media, and call centers, uncovering insights that drove product feature enhancements and improved Net Promoter Score by 15 points. I also conducted market competitive analysis using web scraping techniques and external data sources to benchmark pricing strategies, feature offerings, and market share trends across vehicle segments.
+My partnership with manufacturing teams to optimize production scheduling through demand forecasting models resulted in reducing inventory holding costs by 18% while maintaining optimal stock levels for high-demand models.
 
-This is my Capstone Project, I led a strategic initiative to enhance sales and marketing performance within the athletic retail sector. The core objective was to transform raw customer data into actionable insights that could drive targeted marketing strategies and boost sales revenue. Leveraging Python, I employed advanced clustering techniques to segment customers into six distinct groups based on their income, education level, and purchasing behavior. This segmentation allowed us to tailor our marketing strategies effectively, addressing the unique needs of each customer cohort.
-
-To further optimize retention strategies, I implemented a comprehensive RFM (Recency, Frequency, Monetary) analysis, which proved instrumental in identifying and nurturing loyal customers. This strategic move resulted in a remarkable 50% increase in revenue contribution from our most loyal customer base. Additionally, I developed dynamic and interactive dashboards using Power BI, providing the sales and marketing teams with real-time insights into customer trends. The visualization tools not only improved decision-making but also empowered teams to launch highly effective targeted campaigns, leading to a 25% boost in customer engagement. The project underscored my ability to blend analytical expertise with business acumen, driving tangible business outcomes through data-driven strategies. Below are the visualizations of Sales in Dashboard and RFM Analysis.
-
-<h3>Visualizations from RFM and Sales Dashboard</h3>
-
-<p>Below are key visuals supporting my RFM-based customer segmentation and sales performance dashboard analysis.</p>
-
-<img src="/assets/project-picture-3.png" alt="KPI Dashboard" width="600">
-<img src="/assets/project-picture-4.png" alt="Top Customers Analysis" width="600">
-<img src="/assets/project-picture-2.png" alt="RFM Score Distribution" width="600">
-<img src="/assets/project-picture.png" alt="Customer Segmentation Pie Chart" width="600">
+## Analytics Intern at Hero MotoCorp (Feb 2019 - Sep 2019)
+As an Analytics Intern at Hero MotoCorp, I supported the sales analytics team in creating weekly performance reports tracking dealer-wise sales volumes, model distribution, and regional market penetration across 6,000+ touchpoints using Excel and SQL. I assisted in analyzing customer demographics and purchase patterns to understand buyer profiles and financing preferences across different motorcycle segments, contributing to targeted marketing strategies.
+I collected competitor intelligence including pricing data, promotional campaigns, and new launches while developing visualization templates for monthly business reviews highlighting sales trends and seasonal patterns. My preliminary analysis on warranty claims and service feedback data identified quality improvement opportunities, supporting initiatives that reduced common issues by 10%.
 
 
-### Project: Predictive Revenue Modeling for University Football Team (May 2024 - Jun 2024)
 
-As a forecasting analyst, I designed a predictive model to estimate seasonal revenue generated from a university football team’s media campaigns and sponsorship efforts. Leveraging Python’s forecasting libraries and integrating SQL pipelines, I built a model that provided a 95% confidence interval on annual revenue projections. These forecasts played a pivotal role in guiding strategic sponsorship decisions and budget allocations.
 
-The project culminated in a cross-functional presentation supported by dynamic Tableau dashboards that visualized weekly revenue trends and ROI projections. Insights from the model helped optimize campaign pacing, media placement timing, and stakeholder alignment — resulting in a 20% increase in sponsorship acquisitions and a 15% rise in ticket sales. This project demonstrated my ability to translate forecasting insights into measurable business outcomes within a performance media context.
 
-### Project: Audience Behavior and KPI Analysis for Digital Display & Paid Campaigns  (Jan 2024 - April 2024)
 
-In this project, I analyzed customer data for a mid-sized restaurant brand to identify behavioral and demographic segments that could be targeted more effectively via programmatic campaigns. Using Tableau and Excel, I built visualizations that broke down satisfaction trends, engagement metrics, and repeat visit behavior by segment. These insights helped create tailored content and media strategies that increased campaign resonance across platforms.
 
-I also evaluated survey-based feedback to validate targeting assumptions and adjust messaging strategies. The result was a 15% increase in campaign targeting effectiveness and a 10% boost in overall customer satisfaction. Through structured KPI development and behavioral data analysis, I was able to enhance digital media decision-making and optimize the impact of performance marketing tactics.
-
-### Project: Test-and-Learn Strategy for Local Business Promotions  (Oct 2023 - Dec 2023)
-
-For this project, I collaborated with a local business to design a performance-focused marketing and growth strategy that incorporated digital promotion channels, influencer marketing, and RTB-based experimentation. I performed SWOT and competitive analysis to identify market positioning gaps and used a test-and-learn model to measure the effectiveness of various campaign formats — including time-based discounts, walk-in promotions, and social engagement initiatives.
-
-I developed a KPI framework that monitored average customer spend, repeat visits, and conversion rate by channel. Dashboards and insights guided iterative campaign changes, resulting in increased foot traffic and improved ROI per campaign. This hands-on experience with real-time campaign optimization showcased my ability to support media planning, data-driven storytelling, and client-side execution — all essential for success in Horizon Media’s Performance Media group.
-
-## Certifications
-
-- IBM Data Science (Coursera, 2024)
-- Power BI (Udemy, 2023)
-- Google Adwords (Google, 2023)
 
 ## Contact
 
-- Email: santoshchowdarysimhadri.23f@gmail.com
-- LinkedIn: [Santosh Simhadri](http://www.linkedin.com/in/santoshsimhadri)
+- Email: leela.slsc1507@gmail.com
+- LinkedIn: [Santosh Simhadri](www.linkedin.com/in/leelasimhadri)
 - GitHub: [Your GitHub Profile](your-github-url)
 
 Thank you for taking the time to visit my portfolio. I look forward to connecting with you and discussing how my skills and experiences align with your needs.
