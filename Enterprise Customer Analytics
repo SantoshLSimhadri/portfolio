@@ -1,0 +1,363 @@
+-- Enterprise Customer Analytics Platform
+
+-- CUSTOMER LIFETIME VALUE (CLV) PREDICTION MODEL
+
+-- Create temporary tables for performance optimization
+CREATE TEMP TABLE customer_cohort_analysis AS
+WITH customer_first_purchase AS (
+    SELECT 
+        customer_id,
+        MIN(DATE_TRUNC('month', order_date)) as cohort_month,
+        MIN(order_date) as first_purchase_date
+    FROM orders
+    WHERE order_status NOT IN ('cancelled', 'failed')
+    GROUP BY customer_id
+),
+
+monthly_revenue AS (
+    SELECT 
+        o.customer_id,
+        cfp.cohort_month,
+        DATE_TRUNC('month', o.order_date) as order_month,
+        DATE_PART('month', AGE(DATE_TRUNC('month', o.order_date), cfp.cohort_month)) as months_since_first_purchase,
+        SUM(o.order_total) as monthly_revenue,
+        COUNT(DISTINCT o.order_id) as order_count,
+        SUM(oi.quantity) as items_purchased
+    FROM orders o
+    JOIN customer_first_purchase cfp ON o.customer_id = cfp.customer_id
+    JOIN order_items oi ON o.order_id = oi.order_id
+    WHERE o.order_status = 'completed'
+    GROUP BY 1, 2, 3, 4
+),
+
+customer_metrics AS (
+    SELECT 
+        customer_id,
+        cohort_month,
+        COUNT(DISTINCT order_month) as active_months,
+        SUM(monthly_revenue) as total_revenue,
+        AVG(monthly_revenue) as avg_monthly_revenue,
+        MAX(months_since_first_purchase) as customer_age_months,
+        SUM(order_count) as total_orders,
+        SUM(items_purchased) as total_items,
+        STDDEV(monthly_revenue) as revenue_volatility
+    FROM monthly_revenue
+    GROUP BY 1, 2
+)
+
+SELECT 
+    cm.*,
+    c.customer_segment,
+    c.acquisition_channel,
+    c.geographic_region,
+    CASE 
+        WHEN cm.customer_age_months = 0 THEN cm.total_revenue
+        ELSE cm.total_revenue / cm.customer_age_months * 24 -- 2-year CLV projection
+    END as projected_24m_clv,
+    NTILE(10) OVER (ORDER BY cm.total_revenue DESC) as revenue_decile,
+    CASE 
+        WHEN cm.active_months::FLOAT / GREATEST(cm.customer_age_months, 1) >= 0.8 THEN 'Highly Active'
+        WHEN cm.active_months::FLOAT / GREATEST(cm.customer_age_months, 1) >= 0.5 THEN 'Active'
+        WHEN cm.active_months::FLOAT / GREATEST(cm.customer_age_months, 1) >= 0.3 THEN 'Occasional'
+        ELSE 'Dormant'
+    END as activity_status
+FROM customer_metrics cm
+JOIN customers c ON cm.customer_id = c.customer_id;
+
+-- =====================================================
+-- ADVANCED CHURN PREDICTION WITH FEATURE ENGINEERING
+-- =====================================================
+
+CREATE TEMP TABLE churn_features AS
+WITH customer_activity AS (
+    SELECT 
+        customer_id,
+        order_date,
+        order_total,
+        LAG(order_date) OVER (PARTITION BY customer_id ORDER BY order_date) as previous_order_date,
+        order_date - LAG(order_date) OVER (PARTITION BY customer_id ORDER BY order_date) as days_between_orders
+    FROM orders
+    WHERE order_status = 'completed'
+),
+
+recency_frequency AS (
+    SELECT 
+        customer_id,
+        MAX(order_date) as last_order_date,
+        COUNT(DISTINCT order_date) as order_frequency,
+        AVG(days_between_orders) as avg_days_between_orders,
+        STDDEV(days_between_orders) as order_interval_volatility,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY days_between_orders) as median_days_between_orders,
+        SUM(order_total) as lifetime_value,
+        AVG(order_total) as avg_order_value,
+        MIN(order_date) as first_order_date,
+        CURRENT_DATE - MAX(order_date) as days_since_last_order
+    FROM customer_activity
+    GROUP BY customer_id
+),
+
+product_preferences AS (
+    SELECT 
+        o.customer_id,
+        COUNT(DISTINCT p.category_id) as categories_purchased,
+        COUNT(DISTINCT p.product_id) as unique_products_purchased,
+        MODE() WITHIN GROUP (ORDER BY p.category_id) as favorite_category,
+        AVG(oi.discount_percentage) as avg_discount_used,
+        SUM(CASE WHEN oi.discount_percentage > 0 THEN 1 ELSE 0 END)::FLOAT / COUNT(*) as discount_usage_rate
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    JOIN products p ON oi.product_id = p.product_id
+    WHERE o.order_status = 'completed'
+    GROUP BY o.customer_id
+),
+
+engagement_metrics AS (
+    SELECT 
+        customer_id,
+        COUNT(DISTINCT session_id) as total_sessions,
+        AVG(session_duration_seconds) as avg_session_duration,
+        SUM(CASE WHEN event_type = 'add_to_cart' THEN 1 ELSE 0 END) as cart_additions,
+        SUM(CASE WHEN event_type = 'remove_from_cart' THEN 1 ELSE 0 END) as cart_removals,
+        COUNT(DISTINCT DATE_TRUNC('day', event_timestamp)) as active_days,
+        MAX(event_timestamp) as last_activity_date
+    FROM customer_events
+    GROUP BY customer_id
+),
+
+support_interactions AS (
+    SELECT 
+        customer_id,
+        COUNT(DISTINCT ticket_id) as support_tickets,
+        AVG(resolution_time_hours) as avg_resolution_time,
+        SUM(CASE WHEN sentiment_score < 0 THEN 1 ELSE 0 END) as negative_interactions,
+        AVG(satisfaction_rating) as avg_satisfaction
+    FROM customer_support
+    GROUP BY customer_id
+)
+
+SELECT 
+    rf.*,
+    pp.categories_purchased,
+    pp.unique_products_purchased,
+    pp.favorite_category,
+    pp.avg_discount_used,
+    pp.discount_usage_rate,
+    em.total_sessions,
+    em.avg_session_duration,
+    em.cart_additions,
+    em.cart_removals,
+    em.active_days,
+    CURRENT_DATE - em.last_activity_date::DATE as days_since_last_activity,
+    si.support_tickets,
+    si.avg_resolution_time,
+    si.negative_interactions,
+    si.avg_satisfaction,
+    -- Engineered features for ML model
+    CASE 
+        WHEN rf.days_since_last_order > rf.avg_days_between_orders * 2 THEN 1
+        ELSE 0
+    END as overdue_for_purchase,
+    rf.order_frequency::FLOAT / DATE_PART('day', AGE(rf.last_order_date, rf.first_order_date)) * 365 as orders_per_year,
+    CASE 
+        WHEN rf.days_since_last_order > 90 THEN 'High Risk'
+        WHEN rf.days_since_last_order > 60 THEN 'Medium Risk'
+        WHEN rf.days_since_last_order > 30 THEN 'Low Risk'
+        ELSE 'Active'
+    END as churn_risk_category
+FROM recency_frequency rf
+LEFT JOIN product_preferences pp ON rf.customer_id = pp.customer_id
+LEFT JOIN engagement_metrics em ON rf.customer_id = em.customer_id
+LEFT JOIN support_interactions si ON rf.customer_id = si.customer_id;
+
+-- =====================================================
+-- MARKET BASKET ANALYSIS FOR CROSS-SELL OPPORTUNITIES
+-- =====================================================
+
+CREATE TEMP TABLE product_associations AS
+WITH order_product_pairs AS (
+    SELECT 
+        oi1.order_id,
+        oi1.product_id as product_a,
+        oi2.product_id as product_b,
+        p1.product_name as product_a_name,
+        p2.product_name as product_b_name,
+        p1.category_id as category_a,
+        p2.category_id as category_b
+    FROM order_items oi1
+    JOIN order_items oi2 ON oi1.order_id = oi2.order_id AND oi1.product_id < oi2.product_id
+    JOIN products p1 ON oi1.product_id = p1.product_id
+    JOIN products p2 ON oi2.product_id = p2.product_id
+),
+
+product_support AS (
+    SELECT 
+        product_a,
+        product_b,
+        product_a_name,
+        product_b_name,
+        COUNT(DISTINCT order_id) as order_count,
+        COUNT(DISTINCT order_id)::FLOAT / (SELECT COUNT(DISTINCT order_id) FROM orders) as support
+    FROM order_product_pairs
+    GROUP BY 1, 2, 3, 4
+),
+
+individual_product_support AS (
+    SELECT 
+        product_id,
+        COUNT(DISTINCT order_id)::FLOAT / (SELECT COUNT(DISTINCT order_id) FROM orders) as individual_support
+    FROM order_items
+    GROUP BY product_id
+)
+
+SELECT 
+    ps.*,
+    ips_a.individual_support as product_a_support,
+    ips_b.individual_support as product_b_support,
+    ps.support / ips_a.individual_support as confidence_a_to_b,
+    ps.support / ips_b.individual_support as confidence_b_to_a,
+    ps.support / (ips_a.individual_support * ips_b.individual_support) as lift,
+    LOG(ps.support / (ips_a.individual_support * ips_b.individual_support)) as log_lift
+FROM product_support ps
+JOIN individual_product_support ips_a ON ps.product_a = ips_a.product_id
+JOIN individual_product_support ips_b ON ps.product_b = ips_b.product_id
+WHERE ps.order_count >= 50  -- Minimum support threshold
+ORDER BY lift DESC;
+
+-- =====================================================
+-- REVENUE ATTRIBUTION & CHANNEL PERFORMANCE ANALYSIS
+-- =====================================================
+
+WITH channel_touchpoints AS (
+    SELECT 
+        ma.customer_id,
+        ma.touchpoint_timestamp,
+        ma.channel,
+        ma.campaign_id,
+        o.order_id,
+        o.order_date,
+        o.order_total,
+        ROW_NUMBER() OVER (PARTITION BY ma.customer_id, o.order_id ORDER BY ma.touchpoint_timestamp DESC) as touchpoint_rank,
+        COUNT(*) OVER (PARTITION BY ma.customer_id, o.order_id) as total_touchpoints
+    FROM marketing_attribution ma
+    JOIN orders o ON ma.customer_id = o.customer_id 
+        AND ma.touchpoint_timestamp <= o.order_date 
+        AND ma.touchpoint_timestamp >= o.order_date - INTERVAL '30 days'
+    WHERE o.order_status = 'completed'
+),
+
+attribution_models AS (
+    SELECT 
+        channel,
+        campaign_id,
+        -- Last Touch Attribution
+        SUM(CASE WHEN touchpoint_rank = 1 THEN order_total ELSE 0 END) as last_touch_revenue,
+        COUNT(DISTINCT CASE WHEN touchpoint_rank = 1 THEN order_id END) as last_touch_orders,
+        
+        -- First Touch Attribution
+        SUM(CASE WHEN touchpoint_rank = total_touchpoints THEN order_total ELSE 0 END) as first_touch_revenue,
+        COUNT(DISTINCT CASE WHEN touchpoint_rank = total_touchpoints THEN order_id END) as first_touch_orders,
+        
+        -- Linear Attribution
+        SUM(order_total / total_touchpoints) as linear_attribution_revenue,
+        
+        -- Time Decay Attribution (exponential decay with 7-day half-life)
+        SUM(order_total * POWER(0.5, EXTRACT(EPOCH FROM (order_date - touchpoint_timestamp)) / (7 * 86400))) as time_decay_revenue
+        
+    FROM channel_touchpoints
+    GROUP BY channel, campaign_id
+)
+
+SELECT 
+    am.*,
+    c.campaign_name,
+    c.campaign_cost,
+    c.campaign_start_date,
+    c.campaign_end_date,
+    -- ROI Calculations
+    (am.last_touch_revenue - c.campaign_cost) / NULLIF(c.campaign_cost, 0) as last_touch_roi,
+    (am.linear_attribution_revenue - c.campaign_cost) / NULLIF(c.campaign_cost, 0) as linear_roi,
+    (am.time_decay_revenue - c.campaign_cost) / NULLIF(c.campaign_cost, 0) as time_decay_roi,
+    -- Efficiency Metrics
+    c.campaign_cost / NULLIF(am.last_touch_orders, 0) as last_touch_cpa,
+    am.last_touch_revenue / NULLIF(am.last_touch_orders, 0) as last_touch_aov
+FROM attribution_models am
+LEFT JOIN campaigns c ON am.campaign_id = c.campaign_id
+ORDER BY time_decay_roi DESC;
+
+-- =====================================================
+-- PREDICTIVE INVENTORY OPTIMIZATION
+-- =====================================================
+
+WITH daily_sales AS (
+    SELECT 
+        p.product_id,
+        p.product_name,
+        p.category_id,
+        DATE_TRUNC('day', o.order_date) as sale_date,
+        SUM(oi.quantity) as units_sold,
+        SUM(oi.quantity * oi.unit_price) as revenue,
+        COUNT(DISTINCT o.customer_id) as unique_customers
+    FROM products p
+    LEFT JOIN order_items oi ON p.product_id = oi.product_id
+    LEFT JOIN orders o ON oi.order_id = o.order_id AND o.order_status = 'completed'
+    WHERE o.order_date >= CURRENT_DATE - INTERVAL '365 days'
+    GROUP BY 1, 2, 3, 4
+),
+
+sales_statistics AS (
+    SELECT 
+        product_id,
+        product_name,
+        category_id,
+        AVG(units_sold) as avg_daily_sales,
+        STDDEV(units_sold) as sales_stddev,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY units_sold) as median_daily_sales,
+        PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY units_sold) as p90_daily_sales,
+        MAX(units_sold) as max_daily_sales,
+        COUNT(DISTINCT sale_date) as days_with_sales,
+        SUM(units_sold) as total_units_sold,
+        -- Seasonality detection
+        STDDEV(CASE WHEN EXTRACT(DOW FROM sale_date) = 0 THEN units_sold END) as sunday_stddev,
+        STDDEV(CASE WHEN EXTRACT(DOW FROM sale_date) = 6 THEN units_sold END) as saturday_stddev,
+        AVG(CASE WHEN EXTRACT(DOW FROM sale_date) IN (0,6) THEN units_sold END) as weekend_avg_sales,
+        AVG(CASE WHEN EXTRACT(DOW FROM sale_date) NOT IN (0,6) THEN units_sold END) as weekday_avg_sales
+    FROM daily_sales
+    GROUP BY 1, 2, 3
+),
+
+inventory_metrics AS (
+    SELECT 
+        ss.*,
+        i.current_stock,
+        i.reorder_point,
+        i.reorder_quantity,
+        i.lead_time_days,
+        i.holding_cost_per_unit,
+        i.stockout_cost_per_unit,
+        -- Calculate optimal reorder point using service level approach
+        ss.avg_daily_sales * i.lead_time_days + 
+            1.65 * SQRT(i.lead_time_days) * COALESCE(ss.sales_stddev, 0) as suggested_reorder_point,
+        -- Economic Order Quantity (EOQ) calculation
+        SQRT(2 * ss.avg_daily_sales * 365 * i.stockout_cost_per_unit / i.holding_cost_per_unit) as eoq,
+        -- Days of inventory on hand
+        i.current_stock / NULLIF(ss.avg_daily_sales, 0) as days_on_hand,
+        -- Stockout risk score
+        CASE 
+            WHEN i.current_stock / NULLIF(ss.avg_daily_sales, 0) < i.lead_time_days THEN 'Critical'
+            WHEN i.current_stock / NULLIF(ss.avg_daily_sales, 0) < i.lead_time_days * 1.5 THEN 'High'
+            WHEN i.current_stock / NULLIF(ss.avg_daily_sales, 0) < i.lead_time_days * 2 THEN 'Medium'
+            ELSE 'Low'
+        END as stockout_risk
+    FROM sales_statistics ss
+    JOIN inventory i ON ss.product_id = i.product_id
+)
+
+SELECT * FROM inventory_metrics
+ORDER BY 
+    CASE stockout_risk 
+        WHEN 'Critical' THEN 1 
+        WHEN 'High' THEN 2 
+        WHEN 'Medium' THEN 3 
+        ELSE 4 
+    END,
+    total_units_sold DESC;
