@@ -1,10 +1,3 @@
-# Portfolio
-
-Welcome to my portfolio website repository! I'm Leela Santosh Chowdary Simhadri, an experienced Business Analytics professional with a passion for transforming complex data into actionable business strategies. With hands-on expertise across banking, automotive, and e-commerce industries, I specialize in advanced statistical analysis, fraud detection, and process optimization using Python, SQL, R, and enterprise BI tools. This portfolio showcases my work across fraud detection and risk analytics in banking, warranty optimization and quality analysis in automotive, and customer segmentation and personalization in e-commerce. My projects demonstrate expertise in building predictive models, developing interactive dashboards, implementing statistical process controls, and creating data-driven strategies that transform complex datasets into clear, actionable insights for business stakeholders.
-
-
-## About Me
-
 I am an experienced Business Analytics professional with a proven track record across banking, automotive, and e-commerce industries. My expertise lies in transforming complex data into actionable insights that drive business decisions and optimize performance. With advanced skills in SQL programming, Python (Pandas, NumPy, SciPy), and data visualization tools including Tableau and Power BI, I specialize in creating interactive dashboards and conducting sophisticated statistical analyses.
 Throughout my career, I have successfully contributed to projects resulting in significant cost reductions and revenue increases through data-driven strategies. My passion for analytics extends beyond technical implementation. I excel at translating complex data insights into actionable business recommendations that resonate with stakeholders at all levels. From fraud detection and churn analysis to demand forecasting and price optimization, I bring a comprehensive analytical approach to every challenge.
 
